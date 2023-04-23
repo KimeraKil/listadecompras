@@ -1,0 +1,313 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+header{
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid wheat;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    margin: 0 20px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.titulo h3{
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo{
+    /*border: 1px solid #ccc;
+    border-radius: 50%;*/
+    margin: 0 20px 0 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.logo img{
+    width: 48px;
+    height: 48px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.metrica{
+    display: none;
+}
+
+.metrica label{
+    cursor: pointer;
+}
+
+.metrica div{
+    display: flex;
+    width: 60%;
+}
+
+.metrica input{
+    margin: 0 3px;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    border: 1px solid white;
+    width: 100%;
+}
+
+.metrica #saveSaldo{
+    font-size: .8rem;
+    border: 1px solid white;
+    background-color: rgba(4, 255, 4, 0.637);
+    color: white;
+    border-radius: 8px;
+    width: auto;
+    height: 25px;
+    margin: 2px 0;
+    padding: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.metrica #cLista{
+    font-size: .8rem;
+    border: 1px solid white;
+    background-color: rgba(255, 0, 0, 0.637);
+    color: white;
+    border-radius: 8px;
+    width: auto;
+    height: 25px;
+    margin: 2px 0;
+    padding: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.dispShow{
+    display: flex;
+    margin: 10px 0;
+    /*border-bottom: 1px solid white;*/
+    border-radius: 8px;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    align-items: center;
+    justify-content: space-around;
+    height: 5vh;
+}
+
+.dispShow div{
+    width: 33%;
+    height: 5vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+}
+
+.dispShow div:nth-child(2){
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.inpInf{
+    border-top: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.inpInf input{
+    margin: 0 3px;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    border: 1px solid white;
+    width: 50%;
+}
+
+.inpInf input:nth-child(2){
+    width: 15%;
+}
+
+.inpInf input:nth-child(3){
+    width: 20%;
+}
+
+.inpInf button{
+    font-size: 1.5rem;
+    border: 1px solid white;
+    background-color: rgb(4, 255, 4);
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: 2px 0;
+    padding: 0px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#actMenu{
+    display: none;
+}
+
+.menu label{
+    cursor: pointer;
+}
+
+.menu span{
+    border: 1px solid aliceblue;
+    margin: 5px;
+    width: 35px;
+}
+
+#actMenu:checked ~ header > .menu > label > span:nth-child(1){
+    position: absolute;
+    transform: rotate(45deg);
+}
+
+#actMenu:checked ~ header > .menu > label > span:nth-child(3){
+    position: absolute;
+    transform: rotate(-45deg);
+}
+
+#actMenu:checked ~ header > .menu > label > span:nth-child(2){
+    display: none;
+}
+
+#actMenu:checked ~ .metrica{
+    display: flex;
+    margin: 5px 0;
+    padding: 0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    align-items: center;
+    justify-content: space-around;
+    height: 5vh;
+}
+
+#actMenu:checked ~ .dispShow{
+    display: none;
+}
+
+.listaCompras{
+    width: 100%;
+    height: 70vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.listaCompras ul{
+    width: 95%;
+    list-style: none;
+    margin: 10px auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.listaCompras li{
+    display: flex;
+    /*background-color: aqua;*/
+    justify-content: space-around;
+    align-items: center;
+    margin: 2px 0;
+    padding: 5px 0;
+    border: 1px solid #ccccccde;
+    border-radius: 12px;
+}
+
+.textoTarefa{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    word-break: break-all;
+}
+
+.listaCompras .moreInfo{
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.infomais{
+    position: absolute;
+    background-color: rgba(0, 255, 255, 0.89);
+    width: 60%;
+    height: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.infomais{
+    display: none;
+}
+
+.btnRemove{
+    background-color: black;
+    border: 1px solid white;
+    box-sizing: border-box;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+footer{
+    text-align: center;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.detail{
+    font-weight: bold;
+}

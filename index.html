@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Lista de Compras</title>
+</head>
+<body onLoad="popularLista()">
+    <input type="checkbox" id="actMenu">
+    <header>
+        <div class="menu">
+            <label for="actMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+        <div class="titulo">
+            <h3>Lista de Compras</h3>
+        </div>
+        <div class="logo">
+            <img src="./img/icontexto-webdev-commerce-128x128.png" alt="Logo">
+        </div>
+    </header>
+    <div class="metrica">
+        <div>
+            <input type="text" inputmode="numeric" id="inpSaldo" placeholder="Saldo Disponivel" onkeypress="return event.charCode >= 46 && event.charCode <= 57">
+            <button id="saveSaldo" onclick="savSaldo"><label for="actMenu">Salvar</label></button>
+        </div>
+        <button id="cLista" onclick="limpaTudo"><label for="actMenu">Limpar Lista</label></button>
+    </div>
+    <div class="dispShow">
+        <div>            
+            <label for="sSaldo">Meu Limite</label>
+            <label id="sLimite">R$ 0,00</label>
+        </div>
+        <div>            
+            <label for="sSaldo">Valor Compra</label>
+            <label id="svCompra">R$ 0,00</label>
+        </div>
+        <div>
+            <label for="sSaldo">Total</label>
+            <label id="sTotal">R$ 0,00</label>
+        </div>
+    </div>
+    <div class="inpInf">
+        <input type="text" id="inpProduto" placeholder="Produto" maxlength="25">
+        <input type="number" inputmode="numeric" id="inpQtde" placeholder="Qtde" value="1" onkeypress="return event.charCode >= 46 && event.charCode <= 57">
+        <input type="text" inputmode="numeric" id="inpValor" placeholder="Valor" onkeypress="return event.charCode >= 46 && event.charCode <= 57">
+        <button id="acresItem" onclick="addItem">+</button>
+    </div>
+    <div class="listaCompras">
+        <ul id="lcLista">
+        </ul>
+    </div>
+    <footer>
+        <p>Desenvolvido por <span class="detail"> Aderaldo Anderson S.V Amorim</span></p>
+    </footer>
+    <script src="./js/kimjs.js"></script>
+</body>
+</html>
